@@ -1,0 +1,16 @@
+{
+    "myTask":" My Task",
+    "today":"Today",
+    "day":"Monday, 1 june",
+    "createNewTask":"Create New Task",
+    "taskName":"Task Name",
+    "selectCategory":"Select Category",
+    "seeAll":"see all",
+    "description":"Description",
+    "createTask":"Create Task",
+    "startDate":"start Date",
+    "endDate":"End Date",
+    "date":"Date"
+
+
+}

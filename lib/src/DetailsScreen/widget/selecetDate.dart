@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SelectDate extends StatefulWidget {
   const SelectDate({super.key});
@@ -12,20 +13,21 @@ class SelectDate extends StatefulWidget {
 
 class _SelectDateState extends State<SelectDate> {
   final DateTime date = DateTime.now();
-
+  TextEditingController dates = TextEditingController();
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    TextEditingController dates = TextEditingController();
+
+    final en = AppLocalizations.of(context);
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Date',
-              style: TextStyle(color: Colors.blue, fontSize: 20),
+            Text(
+              en!.date,
+              style: const TextStyle(color: Colors.blue, fontSize: 20),
             ),
             SizedBox(
               width: width >= 600 ? 250 : 230,

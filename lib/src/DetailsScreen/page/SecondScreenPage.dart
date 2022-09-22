@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../model/categoryProvider.dart';
-import '../widget/SecondScreenWidget.dart';
+import '../widget/detalisScreenwidget.dart';
 
 class SecondScreenPage extends StatelessWidget {
   const SecondScreenPage({super.key});

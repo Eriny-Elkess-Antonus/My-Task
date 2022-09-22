@@ -1,8 +1,9 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../SecondScreen/page/SecondScreenPage.dart';
+import '../../DetailsScreen/page/SecondScreenPage.dart';
 import '../widget/curveClip.dart';
 import '../widget/customSquare.dart';
 import '../widget/dayList.dart';
@@ -15,7 +16,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
-
+    final en = AppLocalizations.of(context);
     return Scaffold(
       body: Container(
         padding: const EdgeInsets.only(top: 20.0),
@@ -86,9 +87,9 @@ class HomePage extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          const Text(
-                            'My Task',
-                            style: TextStyle(
+                          Text(
+                            en!.myTask,
+                            style: const TextStyle(
                                 fontSize: 40, fontWeight: FontWeight.bold),
                           ),
                           Padding(
@@ -110,19 +111,19 @@ class HomePage extends StatelessWidget {
                       SizedBox(
                         height: width >= 600 ? 30 : 15.0,
                       ),
-                      Row(children: const [
+                      Row(children: [
                         Text(
-                          'Today',
-                          style: TextStyle(fontSize: 20),
+                          en.today,
+                          style: const TextStyle(fontSize: 20),
                         ),
-                        Spacer(
+                        const Spacer(
                           flex: 1,
                         ),
                         Padding(
                           padding: EdgeInsets.only(left: 20.0),
                           child: Text(
-                            'Monday, 1 june',
-                            style: TextStyle(color: Colors.blue),
+                            en.day,
+                            style: const TextStyle(color: Colors.blue),
                           ),
                         ),
                       ]),

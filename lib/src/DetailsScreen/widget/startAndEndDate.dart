@@ -1,7 +1,7 @@
 // ignore_for_file: file_names, unused_element, use_build_context_synchronously
 
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'customTextForm.dart';
 
 class SartAndEndDate extends StatefulWidget {
@@ -16,16 +16,18 @@ class _SartAndEndDateState extends State<SartAndEndDate> {
   TextEditingController endControl = TextEditingController();
   TimeOfDay time = TimeOfDay.now();
   TimeOfDay time1 = TimeOfDay.now();
+
   @override
   Widget build(BuildContext context) {
+    final en = AppLocalizations.of(context);
     var width = MediaQuery.of(context).size.width;
     return Row(
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Start Time',
+            Text(
+              en!.startDate,
               style: TextStyle(color: Colors.blue, fontSize: 20),
             ),
             SizedBox(
@@ -50,9 +52,9 @@ class _SartAndEndDateState extends State<SartAndEndDate> {
         ),
         Column(
           children: [
-            const Text(
-              'End Time',
-              style: TextStyle(color: Colors.blue, fontSize: 20),
+            Text(
+              en.endDate,
+              style: const TextStyle(color: Colors.blue, fontSize: 20),
             ),
             SizedBox(
               width: width >= 600 ? 180 : 140,
