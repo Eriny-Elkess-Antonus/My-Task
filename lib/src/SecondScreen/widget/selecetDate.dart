@@ -53,10 +53,10 @@ class _SelectDateState extends State<SelectDate> {
             }
           },
           child: Padding(
-            padding: EdgeInsets.only(right: 50.0),
+            padding: const EdgeInsets.only(right: 50.0),
             child: CircleAvatar(
               radius: width >= 600 ? 30 : 22,
-              backgroundColor: Color(0xff5797B0),
+              backgroundColor: const Color(0xff5797B0),
               child: Icon(
                 Icons.date_range,
                 size: width >= 600 ? 40 : 30,

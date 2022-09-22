@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, must_be_immutable
 
 import 'package:flutter/material.dart';
 
@@ -14,9 +14,7 @@ class CustomTextForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      // cursorColor:smokyMint ,
       controller: controller,
-
       decoration: InputDecoration(
           suffixIcon: isIcon!
               ? GestureDetector(

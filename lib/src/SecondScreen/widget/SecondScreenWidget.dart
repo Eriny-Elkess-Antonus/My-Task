@@ -78,15 +78,15 @@ class _SecondScreenWidgetState extends State<SecondScreenWidget> {
               SizedBox(
                 height: width >= 600 ? 50 : 20.0,
               ),
-              CategoryList(),
+              const CategoryList(),
               SizedBox(
                 height: width >= 600 ? 50 : 20.0,
               ),
-              SelectDate(),
+              const SelectDate(),
               SizedBox(
                 height: width >= 600 ? 50 : 20.0,
               ),
-              SartAndEndDate(),
+              const SartAndEndDate(),
               SizedBox(
                 height: width >= 600 ? 50 : 20.0,
               ),
