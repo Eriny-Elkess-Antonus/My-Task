@@ -1,12 +1,13 @@
 # mytaskapp
 
-Meeting taske project widget.
--[provider ]
--[Responsive Ui]
--[Clean code ]
--[DateTime]
+Meeting taske project widge:
+*[provider ]
+*[Responsive Ui]
+*[Clean code ]
+*[DateTime]
 
 ##Screen project and Demo Links
+
 
 
 A few resources to get you started if this is your first Flutter project:
