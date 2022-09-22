@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:mytaskapp/src/SecondScreen/widget/textForm.dart';
 
 class SelectDate extends StatefulWidget {
   const SelectDate({super.key});
@@ -12,43 +11,47 @@ class SelectDate extends StatefulWidget {
 }
 
 class _SelectDateState extends State<SelectDate> {
-  late final DateTime date;
-  late final String dateFormat;
-  Future pickDate(BuildContext context) async {
-    final initialDate = DateTime.now();
-    final newDate = await showDatePicker(
-      context: context,
-      initialDate: date,
-      firstDate: DateTime(DateTime.now().year - 5),
-      lastDate: DateTime(DateTime.now().year + 5),
-    );
-    if (newDate == null) return;
-    setState(() {
-      date = newDate;
-      dateFormat = DateFormat('EEEE, d MMMM').format(date).toString();
-      final monthName = DateFormat('MMMM').format(date);
-      final dayName = DateFormat('EEEE').format(date);
-      final dayNumber = DateFormat('d').format(date);
-    });
-  }
-
-  getText() {
-    if (date != null) {
-      return '${date.month}/${date.day}';
-    }
-  }
+  DateTime date = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
+    TextEditingController _date = TextEditingController();
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisSize: MainAxisSize.max,
       children: [
-        TextForm(
-          controller: getText(),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Date',
+              style: TextStyle(color: Colors.blue, fontSize: 20),
+            ),
+            SizedBox(
+              width: width >= 600 ? 250 : 230,
+              height: width >= 600 ? 50 : 30,
+              child: TextField(
+                controller: _date,
+              ),
+            ),
+          ],
+        ),
+        const Spacer(
+          flex: 2,
         ),
         GestureDetector(
-          onTap: () => pickDate(context),
+          onTap: () async {
+            DateTime? newDate = await showDatePicker(
+                context: context,
+                initialDate: date,
+                firstDate: DateTime(2000),
+                lastDate: DateTime(3030));
+            if (newDate != null) {
+              setState(() {
+                _date.text = DateFormat.MMMMEEEEd().format(newDate).toString();
+              });
+            }
+          },
           child: Padding(
             padding: EdgeInsets.only(right: 50.0),
             child: CircleAvatar(
