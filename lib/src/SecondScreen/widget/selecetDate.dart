@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, unnecessary_import, implementation_imports
+// ignore_for_file: file_names, unnecessary_import, implementation_imports, unused_field
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -11,12 +11,12 @@ class SelectDate extends StatefulWidget {
 }
 
 class _SelectDateState extends State<SelectDate> {
-  DateTime date = DateTime.now();
+  final DateTime date = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
-    TextEditingController _date = TextEditingController();
+    TextEditingController dates = TextEditingController();
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
@@ -31,7 +31,7 @@ class _SelectDateState extends State<SelectDate> {
               width: width >= 600 ? 250 : 230,
               height: width >= 600 ? 50 : 30,
               child: TextField(
-                controller: _date,
+                controller: dates,
               ),
             ),
           ],
@@ -48,7 +48,7 @@ class _SelectDateState extends State<SelectDate> {
                 lastDate: DateTime(3030));
             if (newDate != null) {
               setState(() {
-                _date.text = DateFormat.MMMMEEEEd().format(newDate).toString();
+                dates.text = DateFormat.MMMMEEEEd().format(newDate).toString();
               });
             }
           },
