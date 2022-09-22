@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'categoryList.dart';
 import 'selecetDate.dart';
+import 'startAndEndDate.dart';
 import 'textForm.dart';
 
 class SecondScreenWidget extends StatefulWidget {
@@ -25,7 +26,7 @@ class _SecondScreenWidgetState extends State<SecondScreenWidget> {
         width: double.infinity,
         child: Padding(
           padding: EdgeInsets.only(
-              left: width >= 600 ? 30 : 20, top: width >= 600 ? 50 : 30.0),
+              left: width >= 600 ? 30 : 10, top: width >= 600 ? 50 : 20.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -44,7 +45,7 @@ class _SecondScreenWidgetState extends State<SecondScreenWidget> {
                 ],
               ),
               SizedBox(
-                height: width >= 600 ? 50 : 30,
+                height: width >= 600 ? 50 : 20,
               ),
               const Text(
                 'Task Name',
@@ -54,7 +55,7 @@ class _SecondScreenWidgetState extends State<SecondScreenWidget> {
                 controller: _Controller,
               ),
               SizedBox(
-                height: width >= 600 ? 40 : 30.0,
+                height: width >= 600 ? 10 : 20.0,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -63,34 +64,31 @@ class _SecondScreenWidgetState extends State<SecondScreenWidget> {
                     'Select Category',
                     style: TextStyle(color: Colors.blue, fontSize: 20),
                   ),
-                  Text(
-                    'see all',
-                    style: TextStyle(
-                      color: Colors.blue,
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'see all',
+                      style: TextStyle(
+                        color: Colors.blue,
+                      ),
                     ),
                   ),
                 ],
               ),
               SizedBox(
-                height: width >= 600 ? 50 : 30.0,
+                height: width >= 600 ? 50 : 20.0,
               ),
               CategoryList(),
               SizedBox(
-                height: width >= 600 ? 50 : 30.0,
+                height: width >= 600 ? 50 : 20.0,
               ),
               SelectDate(),
               SizedBox(
-                height: width >= 600 ? 50 : 30.0,
+                height: width >= 600 ? 50 : 20.0,
               ),
-              Row(
-                children: [
-                  Column(
-                    children: [],
-                  ),
-                  Column(
-                    children: [],
-                  )
-                ],
+              SartAndEndDate(),
+              SizedBox(
+                height: width >= 600 ? 50 : 20.0,
               ),
               const Text(
                 'Description',
@@ -111,7 +109,7 @@ class _SecondScreenWidgetState extends State<SecondScreenWidget> {
                       style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
                   ),
-                  onPressed: (() => print('hi')),
+                  onPressed: () => Navigator.of(context).pop(),
                 ),
               )
             ],
