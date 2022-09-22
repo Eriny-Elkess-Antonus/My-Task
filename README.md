@@ -1,10 +1,10 @@
 # mytaskapp
 
 Meeting taske project widget.
--provider 
--Responsive Ui
--Clean code 
--DateTime
+-[provider ]
+-[Responsive Ui]
+-[Clean code ]
+-[DateTime]
 
 ##Screen project and Demo Links
 
