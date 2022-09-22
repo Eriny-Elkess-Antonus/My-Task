@@ -1,6 +1,10 @@
 # mytaskapp
 
-A new Flutter project.
+Meeting taske project widget.
+.provider 
+.Responsive Ui
+.Clean code 
+.DateTime
 
 ## Getting Started
 
