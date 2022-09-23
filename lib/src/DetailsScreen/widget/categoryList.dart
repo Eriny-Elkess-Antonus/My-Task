@@ -22,7 +22,7 @@ class CategoryList extends StatelessWidget {
         itemBuilder: (context, index) {
           return CategoryListItem(
             category: category[index],
-            isSelect: true,
+            isSelect: false,
           );
         },
         separatorBuilder: (context, index) {

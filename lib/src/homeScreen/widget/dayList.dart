@@ -21,7 +21,7 @@ class DayList extends StatelessWidget {
         itemBuilder: (context, index) {
           return DayListItem(
             day: day[index],
-            isSelect: true,
+            isSelect: false,
           );
         },
         separatorBuilder: (context, index) {
