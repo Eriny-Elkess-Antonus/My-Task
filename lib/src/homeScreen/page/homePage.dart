@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import '../../DetailsScreen/page/SecondScreenPage.dart';
+import '../../DetailsScreen/page/detailsScreenPage.dart';
 import '../widget/curveClip.dart';
 import '../widget/customSquare.dart';
 import '../widget/dayList.dart';
@@ -100,7 +100,7 @@ class HomePage extends StatelessWidget {
                                 Navigator.of(context).push(
                                   MaterialPageRoute(
                                     builder: (context) =>
-                                        const SecondScreenPage(),
+                                        const DetailsScreenPage(),
                                   ),
                                 );
                               },

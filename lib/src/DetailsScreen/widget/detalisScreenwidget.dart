@@ -8,14 +8,14 @@ import 'selecetDate.dart';
 import 'startAndEndDate.dart';
 import 'textForm.dart';
 
-class SecondScreenWidget extends StatefulWidget {
-  const SecondScreenWidget({super.key});
+class DetailsScreenWidget extends StatefulWidget {
+  const DetailsScreenWidget({super.key});
 
   @override
-  State<SecondScreenWidget> createState() => _SecondScreenWidgetState();
+  State<DetailsScreenWidget> createState() => _DetailsScreenWidgetState();
 }
 
-class _SecondScreenWidgetState extends State<SecondScreenWidget> {
+class _DetailsScreenWidgetState extends State<DetailsScreenWidget> {
   final _Controller = TextEditingController();
   final _description = TextEditingController();
 
@@ -37,7 +37,8 @@ class _SecondScreenWidgetState extends State<SecondScreenWidget> {
                 children: [
                   Text(
                     en!.createNewTask,
-                    style: const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 30, fontWeight: FontWeight.bold),
                   ),
                   const Icon(
                     Icons.ad_units_outlined,

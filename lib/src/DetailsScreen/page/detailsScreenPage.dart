@@ -5,8 +5,8 @@ import 'package:provider/provider.dart';
 import '../model/categoryProvider.dart';
 import '../widget/detalisScreenwidget.dart';
 
-class SecondScreenPage extends StatelessWidget {
-  const SecondScreenPage({super.key});
+class DetailsScreenPage extends StatelessWidget {
+  const DetailsScreenPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class SecondScreenPage extends StatelessWidget {
             )
           ],
         ),
-        body: const SecondScreenWidget(),
+        body: const DetailsScreenWidget(),
       ),
     );
   }
