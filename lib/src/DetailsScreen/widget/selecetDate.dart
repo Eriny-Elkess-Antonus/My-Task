@@ -50,7 +50,7 @@ class _SelectDateState extends State<SelectDate> {
                 lastDate: DateTime(3030));
             if (newDate != null) {
               setState(() {
-                dates.text = DateFormat.MMMMEEEEd().format(newDate).toString();
+                dates.text = DateFormat.MMMEd().format(newDate).toString();
               });
             }
           },

@@ -6,7 +6,6 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'categoryList.dart';
 import 'selecetDate.dart';
 import 'startAndEndDate.dart';
-import 'textForm.dart';
 
 class DetailsScreenWidget extends StatefulWidget {
   const DetailsScreenWidget({super.key});
@@ -54,7 +53,7 @@ class _DetailsScreenWidgetState extends State<DetailsScreenWidget> {
                 en.taskName,
                 style: const TextStyle(color: Colors.blue, fontSize: 20),
               ),
-              TextForm(
+              TextFormField(
                 controller: _Controller,
               ),
               SizedBox(
@@ -97,7 +96,7 @@ class _DetailsScreenWidgetState extends State<DetailsScreenWidget> {
                 en.description,
                 style: const TextStyle(color: Colors.blue, fontSize: 20),
               ),
-              TextForm(
+              TextFormField(
                 controller: _description,
               ),
               const SizedBox(

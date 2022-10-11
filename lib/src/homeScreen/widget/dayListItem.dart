@@ -18,7 +18,7 @@ class DayListItem extends StatelessWidget {
               : Colors.white,
           borderRadius: BorderRadius.circular(10.0),
           border: Border.all(
-              color: Colors.black, style: BorderStyle.solid, width: 1.5),
+              color: Colors.blue, style: BorderStyle.solid, width: 1.5),
         ),
         child: SizedBox(
             width: 60,
