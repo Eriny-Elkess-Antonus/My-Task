@@ -24,6 +24,7 @@ class DayListItem extends StatelessWidget {
             width: 60,
             height: 55,
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   day.number,

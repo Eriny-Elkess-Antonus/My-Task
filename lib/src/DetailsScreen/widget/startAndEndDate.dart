@@ -28,7 +28,7 @@ class _SartAndEndDateState extends State<SartAndEndDate> {
           children: [
             Text(
               en!.startDate,
-              style: TextStyle(color: Colors.blue, fontSize: 20),
+              style: const TextStyle(color: Colors.blue, fontSize: 20),
             ),
             SizedBox(
               width: width >= 600 ? 180 : 140,

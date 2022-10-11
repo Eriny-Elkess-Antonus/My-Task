@@ -12,8 +12,8 @@ class SelectDate extends StatefulWidget {
 }
 
 class _SelectDateState extends State<SelectDate> {
-  final DateTime date = DateTime.now();
-  TextEditingController dates = TextEditingController();
+  final DateTime _date = DateTime.now();
+  TextEditingController date = TextEditingController();
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -33,7 +33,7 @@ class _SelectDateState extends State<SelectDate> {
               width: width >= 600 ? 250 : 230,
               height: width >= 600 ? 50 : 30,
               child: TextField(
-                controller: dates,
+                controller: date,
               ),
             ),
           ],
@@ -45,12 +45,12 @@ class _SelectDateState extends State<SelectDate> {
           onTap: () async {
             DateTime? newDate = await showDatePicker(
                 context: context,
-                initialDate: date,
+                initialDate: _date,
                 firstDate: DateTime(2000),
                 lastDate: DateTime(3030));
             if (newDate != null) {
               setState(() {
-                dates.text = DateFormat.MMMEd().format(newDate).toString();
+                date.text = DateFormat.MMMEd().format(newDate).toString();
               });
             }
           },

@@ -11,7 +11,7 @@ ThemeData them = ThemeData(
       statusBarColor: Colors.white,
     ),
     iconTheme: IconThemeData(
-      color: Colors.grey,
+      color: Colors.black,
       size: 30.0,
     ),
   ),

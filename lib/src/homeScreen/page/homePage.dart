@@ -120,7 +120,7 @@ class HomePage extends StatelessWidget {
                           flex: 1,
                         ),
                         Padding(
-                          padding: EdgeInsets.only(left: 20.0),
+                          padding: const EdgeInsets.only(left: 20.0),
                           child: Text(
                             en.day,
                             style: const TextStyle(color: Colors.blue),

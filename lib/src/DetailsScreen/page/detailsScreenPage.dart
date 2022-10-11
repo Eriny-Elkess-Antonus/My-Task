@@ -20,7 +20,7 @@ class DetailsScreenPage extends StatelessWidget {
               child: Icon(
                 Icons.drag_handle,
                 size: 40.0,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             )
           ],
